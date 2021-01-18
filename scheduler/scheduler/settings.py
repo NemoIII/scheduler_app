@@ -110,3 +110,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/pointer'),
 ]
+
+# https://myaccount.google.com/lesssecureapps<
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "ipizette@gmail.com"
+EMAIL_HOST_PASSWORD = "kiko25801a"
+EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
+
+
