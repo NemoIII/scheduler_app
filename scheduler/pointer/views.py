@@ -38,3 +38,25 @@ def doctor(request):
 
 def pricing(request):
     return render(request, "pricing.html", {})
+
+def appointment(request):
+    if request.method == "POST":
+        your_name = request.POST["your_name"]
+        pro_name = request.POST["pro_name"]
+        # department = request.POST["department"]
+        date = request.POST["date"]
+        time = request.POST["time"]       
+
+        """send_mail(
+            your_name,
+            pro_name,
+            department,
+            date,
+            time,
+            ["pablo.iii@outlook.com"],
+        )"""
+        return render(request, "appointment.html", {"your_name": your_name, "pro_name": pro_name, "date": date, "time": time})
+    else:
+        return render(request, "home.html", {})
+    
+
