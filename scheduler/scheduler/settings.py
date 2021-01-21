@@ -111,7 +111,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/pointer'),
 ]
 
-# https://myaccount.google.com/lesssecureapps<
+# accounts.google.com/DisplayUnlockCaptcha
+# myaccount.google.com/apppasswords
+# https://myaccount.google.com/lesssecureapps
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "ipizette@gmail.com"
