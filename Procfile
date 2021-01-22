@@ -1,1 +1,1 @@
-web gunicorn scheduler.wsgi:application --log-file -
+web gunicorn scheduler.wsgi
