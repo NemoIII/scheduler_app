@@ -1,7 +1,4 @@
 import os
-import django_heroku
-import dj_database_url
-from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,7 +36,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'scheduler.urls'
@@ -116,7 +112,6 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # accounts.google.com/DisplayUnlockCaptcha
 # myaccount.google.com/apppasswords
@@ -127,7 +122,3 @@ EMAIL_HOST_USER = "ipizette@gmail.com"
 EMAIL_HOST_PASSWORD = "kiko25801a"
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False
-
-
-django_heroku.settings(locals())
-
