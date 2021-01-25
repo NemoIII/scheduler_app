@@ -2,6 +2,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, "static/pointer/js", "servicework.js")
 
 
 # Quick-start development settings - unsuitable for production
@@ -13,7 +14,7 @@ SECRET_KEY = 't=uvsyb)g&12m5sebp55p_0we!y!_ft69)d+ah1a(8k&pa%ry3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', "https://45a7e2c2978d.ngrok.io"]
 
 
 # Application definition
@@ -26,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pointer',
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +124,34 @@ EMAIL_HOST_USER = "ipizette@gmail.com"
 EMAIL_HOST_PASSWORD = "kiko25801a"
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False
+
+
+PWA_APP_NAME = 'Dentista'
+PWA_APP_DESCRIPTION = 'Just an example of what your business can have.'
+PWA_APP_THEME_COLOR = '#9400D3'
+PWA_APP_BACKGROUND_COLOR = '#9370DB'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_SCOPE = '/'
+PWA_APP_ORIENTATION = 'any'
+PWA_APP_START_URL = '/'
+PWA_APP_STATUS_BAR_COLOR = 'default'
+PWA_APP_ICONS = [
+    {
+        'src': 'static/images/maskable_icon_x1.png',
+        'sizes': '512x512'
+    }
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        'src': 'static/images/maskable_icon_x1.png',
+        'sizes': '512x512'
+    }
+]
+PWA_APP_SPLASH_SCREEN = [
+    {
+        'src': 'static/images/maskable_icon_x1.png',
+        'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
+    }
+]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'en-US'
