@@ -30,6 +30,13 @@
     <link rel="stylesheet" href="{% static '/css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static '/css/icomoon.css' %}">
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+    <link rel="apple-touch-icon" href="{% static '/images/tooth.png' %}">
+
+    {% load pwa %}
+
+    {% progressive_web_app_meta %}
+
   </head>
   <body>
     <div class="py-md-5 py-4 border-bottom">
