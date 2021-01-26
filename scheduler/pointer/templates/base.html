@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="{% static '/css/icomoon.css' %}">
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
 
+    <link rel="manifest" href="{% static '/manifest.webmanifest %}">
+
     <link rel="apple-touch-icon" href="{% static '/images/tooth.png' %}">
     {% load pwa %}
 
@@ -38,6 +40,9 @@
 
   </head>
   <body>
+
+    <button class="add-button">Install App</button>
+
     <div class="py-md-5 py-4 border-bottom">
     	<div class="container">
     		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
@@ -211,7 +216,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="{% static '/js/google-map.js' %}"></script>
 <script src="{% static '/js/main.js' %}"></script>
-<script src="{% static '/js/pwaevent.js' %}"></script>
   
 </body>
 </html>
